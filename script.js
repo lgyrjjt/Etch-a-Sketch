@@ -1,13 +1,6 @@
-let gridSize = 10;
+let gridSize = 500;
 
 
-window.addEventListener("load", () => {
-// Data for example
-
-    var data = [
-        ["A", "B", "C"],
-        ["D", "E", "F"]
-    ];
     
 // Loop for adding cells
 
@@ -21,4 +14,4 @@ let container = document.getElementById("grid");
     
     
     
-});
+;
