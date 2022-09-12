@@ -1,0 +1,17 @@
+#grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+}
+
+.head .cell {padding: 10px;}
+.head {
+    font-weight: bold;
+    border: 1px solid black;
+    background: red;
+}
+
+.cell {
+    border: 1px solid blue;
+    background: yellow;
+}
