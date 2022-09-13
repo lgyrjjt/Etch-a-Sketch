@@ -1,88 +1,83 @@
-let gridSize = 1000;
-let rowSize = 50;
+let rowSize = 10;
+let colSize = 10;
 
-//prompt for colum & row size
+
+//prompt for column & row size
 
 let columnInput = prompt("Please enter the size of grid you will like:", "10");
 
     if (columnInput != null) {
-        rowSize = columnInput
+        
         document.getElementById("prompt").innerHTML = "OK so you have chosen a " + columnInput + " x " + columnInput + "grid";
     }
 
+    
+    
+    console.log(typeof columnInput);
+   
+    console.log(typeof Number(columnInput));
+    console.log(parseInt(columnInput, 10));
+    colSize = parseInt(columnInput);
+    console.log(typeof columnInput);
+
+   
 
 
 //make table
 
 function makeTable() {
-    let Jtable = document.getElementById('pC');
+    let Jtable = document.getElementById('pC2');
 
-    for(let i = 0; i < rowSize; i++){
+    for(let i = 0; i < colSize; i++){
         let myrow = document.createElement("tr");
-        myrow.id = "row";
-        myrow.innerHTML = i;
+        myrow.id = "row" + i;
+        myrow.className = "cell";
+        
+       
 
         Jtable.appendChild(myrow);
 
-    }   
+     
     
      
 
     
 
-let rowW = document.getElementById("row");
+let rowW = document.getElementById("row" + i);
 
-    for(let j = 0; j < rowSize; j++) {
+    for(let j = 0; j < colSize; j++) {
         let myCell = document.createElement("td");
-        myCell.innerHTML = "column " + j;
+        
+        myCell.className = "cell";
 
         rowW.appendChild(myCell);
 
-
-
     }
 
     }
+
+    let newcolor = document.getElementById('pC2');
+
+    newcolor.addEventListener('mouseover', (e) => {
+        e.target.classList.add('cS');
+    }
+    );
+
+    }
+
+   
 
 
 makeTable();
 
-/*
-// Loop for adding cells
+// Function to reset page on button click 
 
-let container = document.getElementById("grid");
-    for (let i = 0; i < gridSize; i++) {
-        let cell = document.createElement("div");
-            cell.innerHTML = "";
-            cell.className = "cell";
-            cell.id = "john";
-            container.appendChild(cell);
-        
-        } ;
+function startOver() {
+    location.reload();
+
+}
 
 
 
 
-    // Change selector on mouseover
 
- 
-const selAll = document.querySelectorAll(".cell");
-
-    for (let i = 0; i < gridSize; i++) {
-       
-        grid.addEventListener('mouseover', (e) => {
-        
-        e.target.classList.add("cS");
-        })};
-
-        
-
-/*
-let newcolor = document.querySelector('#john');
-
-    newcolor.addEventListener('mouseover', (e) => {
-        e.target.classList.add('cellSelected');
-    }
-    )
-
-*/

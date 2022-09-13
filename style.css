@@ -6,7 +6,6 @@
   
 }
 
-.head .cell {padding: 10px;}
 .head {
     flex: 0;
     font-weight: bold;
@@ -14,32 +13,53 @@
     background: red;
 }
 
-.pixelCanvas {
-    border: solid black 5px;
-}
 
+.title {
+    background-color: lightcyan;
+    text-align: center;
+    font-size: 40px;
+   
+
+}
 
 .cell {
     flex: 1;
-    border: 1px solid blue;
-    background: yellow;
-    min-height: 20px;
-    min-width: 20px;
+    border: 1px solid rgb(8, 8, 8);
+    background: rgb(234, 238, 240);
+    
     
 }
 
-.head {
-    width: 1px;
+#container {
+    max-width: 960px;
+    max-height: 960px;
+}
+
+
+td {
+    width: 20px;
+}
+
+tr {
+    height: 20px;
 }
 
 .cS {
-    background: rgb(230, 4, 4);
+    border: 1px solid rgb(8, 8, 8);
+    background: rgb(67, 13, 204);
+
 }
 
-.pC {
-    border: black solid 5px;
+button {
+    background-color: rgb(101, 113, 113);
+    margin-bottom: 50px;
+    min-height: 35px;
+    font-weight: 900;
 }
 
-td {
-    border: black solid 5px;
-}
+
+
+
+
+
+
