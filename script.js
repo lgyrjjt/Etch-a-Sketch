@@ -1,7 +1,7 @@
 let gridSize = 1000;
 let rowSize = 50;
 
-//prompt for colum & row size
+//prompt for column & row size
 
 let columnInput = prompt("Please enter the size of grid you will like:", "10");
 
