@@ -5,7 +5,7 @@
     
   
 }
-/*
+
 .head .cell {padding: 10px;}
 .head {
     flex: 0;
@@ -13,9 +13,12 @@
     border: 1px solid black;
     background: red;
 }
-*/
+
+
 .cell {
     flex: 1;
     border: 1px solid blue;
     background: yellow;
+    min-height: 20px;
+    min-width: 20px;
 }
