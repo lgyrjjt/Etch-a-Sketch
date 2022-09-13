@@ -1,13 +1,74 @@
-let gridSize = 500;
+let rowSize = 10;
+let colSize = 10;
 
+
+//prompt for column & row size
+
+let columnInput = prompt("Please enter the size of grid you will like:", "10");
+
+    if (columnInput != null) {
+        
+        document.getElementById("prompt").innerHTML = "OK so you have chosen a " + columnInput + " x " + columnInput + "grid";
+    }
 
     
-// Loop for adding cells
+    
+    console.log(typeof columnInput);
+   
+    console.log(typeof Number(columnInput));
+    console.log(parseInt(columnInput, 10));
+    colSize = parseInt(columnInput);
+    console.log(typeof columnInput);
 
-let container = document.getElementById("grid");
-    for (let i = 0; i < gridSize; i++) {
-        let cell = document.createElement("div");
-            cell.innerHTML = "";
-            cell.className = "cell";
-            container.appendChild(cell);
-    } ;
+   
+
+
+//make table
+
+function makeTable() {
+    let Jtable = document.getElementById('pC2');
+
+    for(let i = 0; i < colSize; i++){
+        let myrow = document.createElement("tr");
+        myrow.id = "row" + i;
+        myrow.className = "cell";
+        
+       
+
+        Jtable.appendChild(myrow);
+
+     
+    
+     
+
+    
+
+let rowW = document.getElementById("row" + i);
+
+    for(let j = 0; j < colSize; j++) {
+        let myCell = document.createElement("td");
+        
+        myCell.className = "cell";
+
+        rowW.appendChild(myCell);
+
+    }
+
+    }
+
+    let newcolor = document.getElementById('pC2');
+
+    newcolor.addEventListener('mouseover', (e) => {
+        e.target.classList.add('cS');
+    }
+    );
+
+    }
+
+   
+
+
+makeTable();
+
+
+
