@@ -24,7 +24,7 @@
 
 .cell {
     flex: 1;
-    border: 1px solid rgb(8, 8, 8);
+    
     background: rgb(234, 238, 240);
     
     
@@ -44,8 +44,12 @@ tr {
     height: 20px;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 .cS {
-    border: 1px solid rgb(8, 8, 8);
+    
     background: rgb(67, 13, 204);
 
 }
