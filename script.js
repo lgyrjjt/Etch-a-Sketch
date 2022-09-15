@@ -30,7 +30,7 @@ if (columnInput > 100) {
 function makeTable() {
     let Jtable = document.getElementById('pC2');
 
-    for(let i = 0; i < colSize; i++){
+    for(let i = 0; i < colSize + 1; i++){
         let myrow = document.createElement("tr");
         myrow.id = "row" + i;
         myrow.className = "cell";
