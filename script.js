@@ -6,11 +6,13 @@ let colSize = 10;
 
 let columnInput = prompt("Please enter the size of grid you will like:", "10");
 
-    if (columnInput != null) {
+if (columnInput > 100) {
+    alert("For a smoother experiance - please choose a grid size under 100")
+    startOver();
+
+} else if (columnInput != null) {
         
         document.getElementById("prompt").innerHTML = "OK so you have chosen a " + columnInput + " x " + columnInput + "grid";
-    }
-
     
     
     console.log(typeof columnInput);
@@ -21,7 +23,7 @@ let columnInput = prompt("Please enter the size of grid you will like:", "10");
     console.log(typeof columnInput);
 
    
-
+}
 
 //make table
 
